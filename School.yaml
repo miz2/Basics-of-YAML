@@ -1,0 +1,8 @@
+School:
+  name: dps
+  principal: someone
+  Student:
+    Student:
+      rollno: 23
+      name: "Tanu"
+      marks: 67

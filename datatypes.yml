@@ -1,0 +1,45 @@
+# string variable is also here
+name : mizaan
+fruit: "apple"
+job: 'se'
+bio: |
+  hey i am shsdd
+  i am bad.
+
+# WRITE A single line in mulitple line 
+message: >
+  this will be
+  a single 
+  line
+---
+number : 67
+marks: 90.56
+booleanval: No #n , N false,False ,FALSE 
+# same for true yes ,y,Y
+# specilfy the types :
+zero: !!int 0
+posi: !!int 45
+negi: !!int -45
+bina: !!int 01
+oct: !!int 0456
+hexa: !!int 045
+# commaval: !!int +540_00
+
+#floating point numbers
+mark: !!float 56.78
+infinite: !!float .inf
+# not a number
+not a num: .nan
+# b: !!bool n
+msg: !!str "this is a string"
+
+#null 
+surname: !!null Null
+
+#Dates and time 
+date : !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43.12 +5:30
+
+# add exponents 
+exponential: 6.023455
+

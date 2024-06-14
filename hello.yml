@@ -1,0 +1,17 @@
+"apple": "i am read fruit"
+1: "this is me"
+---
+# list 
+- apple
+- mango
+- banana
+- Apple 
+---
+cities:
+  - new delhi
+  - old delhi
+  - mumbai
+  - kanpur
+---
+{mango: "yellow fruit",age: 56}
+...

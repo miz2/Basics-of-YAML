@@ -1,0 +1,106 @@
+student: !!seq
+  - !!map
+    marks: 85
+    name: John Doe
+    roll_no: 12345
+  - !!map
+    marks: 90
+    name: Jane Smith
+    roll_no: 67890
+# like this also
+cities: [newdelhi,mumbai]
+
+#some of the keys of the seq will be empty:sparse seq
+sparse seq:
+  -hey
+  -how
+  -
+  -NULL
+  -sup
+---
+#nested sequnece
+!!seq
+  - !!seq
+    - mango
+    - apple
+    - banana
+---
+!!seq
+  - !!seq
+    - marks
+    - roll_no
+    - date
+
+#key :value pair are called maps
+---
+# nested maps
+name: mizaan
+role: 
+  age: 56
+  job: wokrer
+
+# same as s
+---
+!!map
+  name1: mizaan
+  role: !!map
+    age: 56
+    job: worker
+
+---
+
+#pairs :keys may have duplicate values 
+!!pairs
+  - job: student
+  - job: teacher
+
+---
+# same as :this array will be array of hashtables
+pair example: !!pairs
+  [-job: student,job: teacher]
+
+---
+# !! set will allow us to only have unique values 
+names2: !!set 
+  ? kunal
+  ? apoorv
+  ? rahul
+
+---
+
+#dictionery 
+People: !!omap
+  - kunal:
+      name: kunal kapoor
+      age: 66
+      height: 65
+  - rahul:
+      name: rahul singh
+      age: 23
+      height: 64
+
+---
+#reusing some properties use anchors 
+# what is the property we want to use 
+likings: &likes
+  fav fruit: apple
+  dislikes: mango
+
+person1:
+  name:  kapoor
+  fav fruit: apple
+  dislikes: mango
+
+person2:
+  name: kunal kapoor
+  fav fruit: apple
+  dislikes: mango
+
+person3:
+  name: kunal kapoor2
+  <<: *likes
+# we can also override it 
+person4:
+  name: kunal kapoor5 
+  <<: *likes
+  dislikes: berries

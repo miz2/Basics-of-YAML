@@ -1,0 +1,262 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red81\green100\blue100;\red2\green17\blue29;\red205\green214\blue230;
+\red111\green213\blue190;\red230\green184\blue123;\red209\green244\blue213;\red185\green122\blue229;\red243\green119\blue89;
+\red252\green61\blue97;\red112\green150\blue255;\red0\green0\blue0;\red111\green213\blue190;\red2\green17\blue29;
+\red205\green214\blue230;\red185\green122\blue229;\red243\green119\blue89;\red230\green184\blue123;\red81\green100\blue100;
+\red255\green255\blue255;\red112\green150\blue255;\red186\green225\blue101;}
+{\*\expandedcolortbl;;\cssrgb\c38824\c46667\c46667;\cssrgb\c392\c8627\c15294;\cssrgb\c83922\c87059\c92157;
+\cssrgb\c49804\c85882\c79216;\cssrgb\c92549\c76863\c55294;\cssrgb\c85098\c96078\c86667;\cssrgb\c78039\c57255\c91765;\cssrgb\c96863\c54902\c42353;
+\cssrgb\c100000\c34510\c45490;\cssrgb\c50980\c66667\c100000;\cssrgb\c0\c0\c0;\cssrgb\c49804\c85882\c79216;\cssrgb\c392\c8627\c15294;
+\cssrgb\c83922\c87059\c92157;\cssrgb\c78039\c57255\c91765;\cssrgb\c96863\c54902\c42353;\cssrgb\c92549\c76863\c55294;\cssrgb\c38824\c46667\c46667;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c50980\c66667\c100000;\cssrgb\c77255\c89412\c47059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\b\fs36 \cf0 YAML:\
+
+\f1\b0 \
+Ain\'92t markup language \
+Data format used to exchange data\
+Similar to xml and json \
+Only store data and not commands . \
+
+\f0\b Data serialisation:done in yaml json xml \
+A process of converting data structure in a stream of storage . \
+From complex to simpler 
+\f1\b0  \
+Like an object . Streams are chunk of data. Object-> Stream \
+
+\f0\b Deserialisation file to object \
+Stream-> Object \
+\
+Object :collect+data\
+
+\f1\b0 Objects are in memory they are serialised to stream of data/byte  like yaml database memory .\
+Can be now easily transported in any place like android web IOS etc .\
+Used in config files like Kubernetes/Docker  config files. \
+Log ,caches etc. \
+\
+
+\f0\b Benefits:
+\f1\b0 \
+Simple and easy to read\
+Strict syntax with indentation \
+Easily convertible to json/xml \
+Most languages use yaml\
+More powerful when representing complex data .\
+Tools are allowed like parsers and other tools \
+Parsing is easy. \
+\
+Stored as a key value pair like in Hashmap but only a textual representation.\
+It is case sensitive.\
+\
+https://www.yamllint.com/\
+\
+\'97 is used to separate	the documents. \
+\
+\'85 to finish the document \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 \cb3 \expnd0\expndtw0\kerning0
+# string variable is also here\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 name\cf4  : \cf6 mizzen\cf4 \cb1 \
+\cf5 \cb3 fruit\cf4 : \cf7 "\cf6 apple\cf7 \'94\cf4 \cb1 \
+\cf5 \cb3 job\cf4 : \cf7 '\cf6 se\cf7 '\cf4 \cb1 \
+\
+To place in multiple lines :\
+\cf5 \cb3 bio\cf4 : \cf8 |\cf4 \cb1 \
+\cf6 \cb3   hey i am shsdd\cf4 \cb1 \
+\cf6 \cb3   i am bad.\cf4 \cb1 \
+\
+\
+Datetypes:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # string variable is also here\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 name\cf4  : \cf6 mizaan\cf4 \cb1 \
+\cf5 \cb3 fruit\cf4 : \cf7 "\cf6 apple\cf7 "\cf4 \cb1 \
+\cf5 \cb3 job\cf4 : \cf7 '\cf6 se\cf7 '\cf4 \cb1 \
+\cf5 \cb3 bio\cf4 : \cf8 |\cf4 \cb1 \
+\cf6 \cb3   hey i am shsdd\cf4 \cb1 \
+\cf6 \cb3   i am bad.\cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # WRITE A single line in mulitple line \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 message\cf4 : \cf8 >\cf4 \cb1 \
+\cf6 \cb3   this will be\cf4 \cb1 \
+\cf6 \cb3   a single \cf4 \cb1 \
+\cf6 \cb3   line\cf4 \cb1 \
+\cb3 ---\cb1 \
+\cf5 \cb3 number\cf4  : \cf9 67\cf4 \cb1 \
+\cf5 \cb3 marks\cf4 : \cf9 90.56\cf4 \cb1 \
+\cf5 \cb3 booleanval\cf4 : \cf10 No\cf4  \cf2 #n , N false,False ,FALSE \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # same for true yes ,y,Y\cf4 \cb1 \
+\cf2 \cb3 # specilfy the types :\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 zero\cf4 : \cf8 !!int\cf4  \cf9 0\cf4 \cb1 \
+\cf5 \cb3 posi\cf4 : \cf8 !!int\cf4  \cf9 45\cf4 \cb1 \
+\cf5 \cb3 negi\cf4 : \cf8 !!int\cf4  \cf9 -45\cf4 \cb1 \
+\cf5 \cb3 bina\cf4 : \cf8 !!int\cf4  \cf9 01\cf4 \cb1 \
+\cf5 \cb3 oct\cf4 : \cf8 !!int\cf4  \cf9 0456\cf4 \cb1 \
+\cf5 \cb3 hexa\cf4 : \cf8 !!int\cf4  \cf9 045\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # commaval: !!int +540_00\cf4 \cb1 \
+\
+\cf2 \cb3 #floating point numbers\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 mark\cf4 : \cf8 !!float\cf4  \cf9 56.78\cf4 \cb1 \
+\cf5 \cb3 infinite\cf4 : \cf8 !!float\cf4  \cf9 .inf\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # not a number\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 not a num\cf4 : \cf9 .nan\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # b: !!bool n\cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 msg\cf4 : \cf8 !!str\cf4  \cf7 "\cf6 this is a string\cf7 "\cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 #null \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 surname\cf4 : \cf8 !!null\cf4  \cf10 Null\cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 #Dates and time \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 date\cf4  : \cf8 !!timestamp\cf4  \cf11 2002-12-14\cf4 \cb1 \
+\cf5 \cb3 india time\cf4 : \cf6 2001-12-15T02:59:43.12 +5:30\cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 # add exponents \cf4 \cb1 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3 exponential\cf4 : \cf9 6.023455\cf4 \cb1 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf12 Advance Data types:\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf13 \cb14 \outl0\strokewidth0 \strokec13 student\cf15 \strokec15 : \cf16 \strokec16 !!seq\cf15 \cb1 \strokec15 \
+\cb14   - \cf16 \strokec16 !!map\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 marks\cf15 \strokec15 : \cf17 \strokec17 85\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 John Doe\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 roll_no\cf15 \strokec15 : \cf17 \strokec17 12345\cf15 \cb1 \strokec15 \
+\cb14   - \cf16 \strokec16 !!map\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 marks\cf15 \strokec15 : \cf17 \strokec17 90\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 Jane Smith\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 roll_no\cf15 \strokec15 : \cf17 \strokec17 67890\cf15 \cb1 \strokec15 \
+\cf19 \cb14 \strokec19 # like this also\cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 cities\cf15 \strokec15 : [\cf18 \strokec18 newdelhi\cf15 \strokec15 ,\cf18 \strokec18 mumbai\cf15 \strokec15 ]\cb1 \
+\
+\cf19 \cb14 \strokec19 #some of the keys of the seq will be empty:sparse seq\cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 sparse seq\cf15 \strokec15 :\cb1 \
+\cb14   \cf18 \strokec18 -hey\cf15 \cb1 \strokec15 \
+\cb14   \cf18 \strokec18 -how\cf15 \cb1 \strokec15 \
+\cb14   -\cb1 \
+\cb14   \cf18 \strokec18 -NULL\cf15 \cb1 \strokec15 \
+\cb14   \cf18 \strokec18 -sup\cf15 \cb1 \strokec15 \
+\cb14 ---\cb1 \
+\cf19 \cb14 \strokec19 #nested sequnece\cf15 \cb1 \strokec15 \
+\cf16 \cb14 \strokec16 !!seq\cf15 \cb1 \strokec15 \
+\cb14   - \cf16 \strokec16 !!seq\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 mango\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 apple\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 banana\cf15 \cb1 \strokec15 \
+\cb14 ---\cb1 \
+\cf16 \cb14 \strokec16 !!seq\cf15 \cb1 \strokec15 \
+\cb14   - \cf16 \strokec16 !!seq\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 marks\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 roll_no\cf15 \cb1 \strokec15 \
+\cb14     - \cf18 \strokec18 date\cf15 \cb1 \strokec15 \
+\
+\cf19 \cb14 \strokec19 #key :value pair are called maps\cf15 \cb1 \strokec15 \
+\cb14 ---\cb1 \
+\cf19 \cb14 \strokec19 # nested maps\cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 mizaan\cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 role\cf15 \strokec15 : \cb1 \
+\cb14   \cf13 \strokec13 age\cf15 \strokec15 : \cf17 \strokec17 56\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 job\cf15 \strokec15 : \cf18 \strokec18 wokrer\cf15 \cb1 \strokec15 \
+\
+\cf19 \cb14 \strokec19 # same as s\cf15 \cb1 \strokec15 \
+\cb14 ---\cb1 \
+\cf16 \cb14 \strokec16 !!map\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 name1\cf15 \strokec15 : \cf18 \strokec18 mizaan\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 role\cf15 \strokec15 : \cf16 \strokec16 !!map\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 age\cf15 \strokec15 : \cf17 \strokec17 56\cf15 \cb1 \strokec15 \
+\cb14     \cf13 \strokec13 job\cf15 \strokec15 : \cf18 \strokec18 worker\cf15 \cb1 \strokec15 \
+\
+\cb14 ---\cb1 \
+\
+\cf19 \cb14 \strokec19 #pairs :keys may have duplicate values \cf15 \cb1 \strokec15 \
+\cf16 \cb14 \strokec16 !!pairs\cf15 \cb1 \strokec15 \
+\cb14   - \cf13 \strokec13 job\cf15 \strokec15 : \cf18 \strokec18 student\cf15 \cb1 \strokec15 \
+\cb14   - \cf13 \strokec13 job\cf15 \strokec15 : \cf18 \strokec18 teacher\cf15 \cb1 \strokec15 \
+\
+\cb14 ---\cb1 \
+\cf19 \cb14 \strokec19 # same as :this array will be array of hashtables\cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 pair example\cf15 \strokec15 : \cf16 \strokec16 !!pairs\cf15 \cb1 \strokec15 \
+\cb14   [\cf13 \strokec13 -job\cf15 \strokec15 : \cf18 \strokec18 student\cf15 \strokec15 ,\cf13 \strokec13 job\cf15 \strokec15 : \cf18 \strokec18 teacher\cf15 \strokec15 ]\cb1 \
+\
+\cb14 ---\cb1 \
+\cf19 \cb14 \strokec19 # !! set will allow us to only have unique values \cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 names2\cf15 \strokec15 : \cf16 \strokec16 !!set\cf15 \strokec15  \cb1 \
+\cb14   ? \cf18 \strokec18 kunal\cf15 \cb1 \strokec15 \
+\cb14   ? \cf18 \strokec18 apoorv\cf15 \cb1 \strokec15 \
+\cb14   ? \cf18 \strokec18 rahul\cf15 \cb1 \strokec15 \
+\
+\cf18 \cb14 \strokec18 ---\cf15 \cb1 \strokec15 \
+\
+\cf19 \cb14 \strokec19 #dictionery \cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 People\cf20 \cb14 \strokec20 :\cf15 \cb14 \strokec15  \cf16 \strokec16 !!omap\cf15 \cb1 \strokec15 \
+\cb14   - \cf13 \strokec13 kunal\cf15 \strokec15 :\cb1 \
+\cb14       \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 kunal kapoor\cf15 \cb1 \strokec15 \
+\cb14       \cf13 \strokec13 age\cf15 \strokec15 : \cf17 \strokec17 66\cf15 \cb1 \strokec15 \
+\cb14       \cf13 \strokec13 height\cf15 \strokec15 : \cf17 \strokec17 65\cf15 \cb1 \strokec15 \
+\cb14   - \cf13 \strokec13 rahul\cf15 \strokec15 :\cb1 \
+\cb14       \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 rahul singh\cf15 \cb1 \strokec15 \
+\cb14       \cf13 \strokec13 age\cf15 \strokec15 : \cf17 \strokec17 23\cf15 \cb1 \strokec15 \
+\cb14       \cf13 \strokec13 height\cf15 \strokec15 : \cf17 \strokec17 64\cf15 \cb1 \strokec15 \
+\
+\cb14 ---\cb1 \
+\cf19 \cb14 \strokec19 #reusing some properties use anchors \cf15 \cb1 \strokec15 \
+\cf19 \cb14 \strokec19 # what is the property we want to use \cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 likings\cf15 \strokec15 : \cf16 \strokec16 &\cf15 \strokec15 likes\cb1 \
+\cb14   \cf13 \strokec13 fav fruit\cf15 \strokec15 : \cf18 \strokec18 apple\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 dislikes\cf15 \strokec15 : \cf18 \strokec18 mango\cf15 \cb1 \strokec15 \
+\
+\cf13 \cb14 \strokec13 person1\cf15 \strokec15 :\cb1 \
+\cb14   \cf13 \strokec13 name\cf15 \strokec15 :  \cf18 \strokec18 kapoor\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 fav fruit\cf15 \strokec15 : \cf18 \strokec18 apple\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 dislikes\cf15 \strokec15 : \cf18 \strokec18 mango\cf15 \cb1 \strokec15 \
+\
+\cf13 \cb14 \strokec13 person2\cf15 \strokec15 :\cb1 \
+\cb14   \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 kunal kapoor\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 fav fruit\cf15 \strokec15 : \cf18 \strokec18 apple\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 dislikes\cf15 \strokec15 : \cf18 \strokec18 mango\cf15 \cb1 \strokec15 \
+\
+\cf13 \cb14 \strokec13 person3\cf15 \strokec15 :\cb1 \
+\cb14   \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 kunal kapoor2\cf15 \cb1 \strokec15 \
+\cb14   \cf21 \cb14 \strokec21 <<\cf15 \cb14 \strokec15 : \cf16 \strokec16 *\cf22 \cb14 \strokec22 likes\cf15 \cb1 \strokec15 \
+\cf19 \cb14 \strokec19 # we can also override it \cf15 \cb1 \strokec15 \
+\cf13 \cb14 \strokec13 person4\cf15 \strokec15 :\cb1 \
+\cb14   \cf13 \strokec13 name\cf15 \strokec15 : \cf18 \strokec18 kunal kapoor5\cf15 \strokec15  \cb1 \
+\cb14   \cf21 \cb14 \strokec21 <<\cf15 \cb14 \strokec15 : \cf16 \strokec16 *\cf22 \cb14 \strokec22 likes\cf15 \cb1 \strokec15 \
+\cb14   \cf13 \strokec13 dislikes\cf15 \strokec15 : \cf18 \strokec18 berries\cf15 \cb1 \strokec15 \
+\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\fs36 \cf4 \outl0\strokewidth0 Tools for yaml\
+Datree\
+Lens for kubernetes \
+\
+\
+}
